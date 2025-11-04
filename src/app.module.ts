@@ -11,6 +11,7 @@ import { PasswordService } from './password/password.service';
 import { AuthModule } from './auth/auth.module';
 import { JwtModule, JwtService } from '@nestjs/jwt';
 import { ClientModule } from './client/client.module';
+import { SeedModule } from './seed/seed.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { ClientModule } from './client/client.module';
     UserModule,
     AuthModule,
     ClientModule,
+    SeedModule,
     JwtModule.registerAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
